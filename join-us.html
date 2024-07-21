@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kukiku - Delicious Cookies and Ice Cream</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .form-container {
+            max-width: 100%;
+        }
+        .advertisements img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (min-width: 768px) {
+            .col-md-10 {
+                flex: 0 0 auto;
+                width: 83.33333333%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="img/logo.png" alt="Kukiku Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                            <li class="nav-item"><a class="nav-link" href="ourstory.html">Our Story</a></li>
+                            <li class="nav-item"><a class="nav-link" href="outlet.html">Outlet</a></li>
+                            <li class="nav-item"><a class="nav-link" href="join-us.html">Join Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/banner3.png" class="d-block w-100 mx-auto" alt="Kukiku Banner">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/banner4.png" class="d-block w-100 mx-auto" alt="Another Banner">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+    
+        
+    </header>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form id="registrationForm" class="form-container">
+                            <h2 class="text-center form-title">Form Pendaftaran Baking Class</h2>
+                            <div class="form-group">
+                                <label for="namaLengkap">Nama Lengkap</label>
+                                <input type="text" class="form-control input-field" id="namaLengkap" placeholder="Masukkan nama lengkap">
+                            </div>
+                            <div class="form-group">
+                                <label for="nomorTelepon">Nomor Telepon</label>
+                                <input type="number" class="form-control input-field" id="nomorTelepon" placeholder="Masukkan nomor telepon">
+                            </div>
+                            <div class="form-group">
+                                <label for="alamatEmail">Alamat Email</label>
+                                <input type="email" class="form-control input-field" id="alamatEmail" placeholder="Masukkan email">
+                            </div>
+                            <div class="form-group">
+                                <label for="pilihanKelas">Pilih Kelas</label>
+                                <select class="form-control input-field" id="pilihanKelas">
+                                    <option value="kelasDasar">Kelas Dasar</option>
+                                    <option value="kelasMenengah">Kelas Menengah</option>
+                                    <option value="kelasLanjutan">Kelas Lanjutan</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tanggalPendaftaran">Tanggal Pendaftaran</label>
+                                <input type="date" class="form-control input-field" id="tanggalPendaftaran">
+                            </div>
+                            <div class="form-group">
+                                <label>Waktu yang Diinginkan</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="waktuPilihan" id="pagi" value="pagi">
+                                    <label class="form-check-label" for="pagi">Pagi</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="waktuPilihan" id="siang" value="siang">
+                                    <label class="form-check-label" for="siang">Siang</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="waktuPilihan" id="sore" value="sore">
+                                    <label class="form-check-label" for="sore">Sore</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="catatanTambahan">Catatan Tambahan</label>
+                                <textarea class="form-control input-field" id="catatanTambahan" rows="3" placeholder="Masukkan catatan tambahan jika ada"></textarea>
+                            </div>
+                            <div class="text-center p-4">
+                                <button type="submit" class="btn btn-custom">Daftar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="advertisements">
+                            <div class="ad-container mb-4">
+                                <img src="img/iklan1.png" class="img-fluid" alt="Iklan 1">
+                                <div class="overlay">
+                                    <div class="text">Batch 1</div>
+                                </div>
+                            </div>
+                            <div class="ad-container mb-4">
+                                <img src="img/iklan2.png" class="img-fluid" alt="Iklan 2">
+                                <div class="overlay">
+                                    <div class="text">Batch 2</div>
+                                </div>
+                            </div>
+                            <div class="ad-container mb-4">
+                                <img src="img/iklan3.png" class="img-fluid" alt="Iklan 3">
+                                <div class="overlay">
+                                    <div class="text">Batch 3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+   <!-- Rating Stars and Comments Carousel -->
+   <div class="text-center">
+    <div class="top">
+        <h4>Top Reviews</h4>
+    </div>
+</div>
+
+<div id="reviewsCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="d-block w-100 review-card">
+                <div class="text-center p-4">
+                    <div class="user-photo">
+                        <img src="img/user1.jpeg" alt="User Photo"
+                            class="rounded-circle img-thumbnail">
+                    </div>
+                    <div class="rating-box mt-3 p-3">
+                        <div class="rating">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="mt-2">"Bintang 5!! mau coba lagi di batch selanjutnyaa."</p>
+                        <small>- Dea</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-block w-100 review-card">
+                <div class="text-center p-4">
+                    <div class="user-photo">
+                        <img src="img/user2.jpeg" alt="User Photo"
+                            class="rounded-circle img-thumbnail">
+                    </div>
+                    <div class="rating-box mt-3 p-3">
+                        <div class="rating">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                        <p class="mt-2">"Kelasnya luar biasaaa dan resepnya maknyoss."</p>
+                        <small>- Dinda</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <div class="d-block w-100 review-card">
+                <div class="text-center p-4">
+                    <div class="user-photo">
+                        <img src="img/user3.jpeg" alt="User Photo"
+                            class="rounded-circle img-thumbnail">
+                    </div>
+                    <div class="rating-box mt-3 p-3">
+                        <div class="rating">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="mt-2">"Numero unooo! instrukturnya sangat baik dan sabar"</p>
+                        <small>- Sansan</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</div>
+
+<hr>
+
+<div class="container add-comment text-center">
+<div class="add-comment">
+    <h4>Tambahkan Komentar Anda</h4>
+</div>
+
+<form id="commentForm">
+    <div class="mb-3">
+        <input type="text" class="form-control" id="userName" placeholder="Your Name">
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" id="userComment" rows="3" placeholder="Your Comment"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-custom">Kirim</button>
+</form>
+</div>
+
+<hr>
+
+<footer class="bg-light text-white text-center py-4">
+<p class="text-black">GET IN TOUCH</p>
+<div class="container">
+    <div class="mb-3">
+        <a href="https://www.facebook.com" class="text-black me-4" aria-label="facebook"><i
+                class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://www.instagram.com" class="text-black me-4" aria-label="instagram"><i
+                class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://www.twitter.com" class="text-black" aria-label="twitter"><i
+                class="fab fa-twitter fa-2x"></i></a>
+    </div>
+    <p class="text-black">&copy; 2024 Kukiku. All Rights Reserved</p>
+</div>
+</footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>     
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            // Get form fields
+            var namaLengkap = document.getElementById('namaLengkap').value;
+            var nomorTelepon = document.getElementById('nomorTelepon').value;
+            var alamatEmail = document.getElementById('alamatEmail').value;
+            var pilihanKelas = document.getElementById('pilihanKelas').value;
+            var tanggalPendaftaran = document.getElementById('tanggalPendaftaran').value;
+            var waktuPilihan = document.querySelector('input[name="waktuPilihan"]:checked');
+
+            // Check if any field is empty
+            if (!namaLengkap || !nomorTelepon || !alamatEmail || !pilihanKelas || !tanggalPendaftaran || !waktuPilihan) {
+                alert('Harap isi semua kolom.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+
+        document.getElementById('commentForm').addEventListener('submit', function (event) {
+            // Get comment form fields
+            var commentName = document.getElementById('commentName').value;
+            var commentRating = document.getElementById('commentRating').value;
+            var commentText = document.getElementById('commentText').value;
+
+            // Check if any field is empty
+            if (!commentName || !commentRating || !commentText) {
+                alert('Harap isi semua kolom.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+      document.addEventListener('DOMContentLoaded', function() {
+    var adContainers = document.querySelectorAll('.ad-container');
+    
+    adContainers.forEach(function(container) {
+        container.addEventListener('touchstart', function() {
+            this.querySelector('.overlay').style.opacity = '1';
+        });
+        
+        container.addEventListener('touchend', function() {
+            this.querySelector('.overlay').style.opacity = '0';
+        });
+    });
+});
+    </script>
+
+</body>
+
+</html>
