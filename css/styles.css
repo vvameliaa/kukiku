@@ -1,34 +1,37 @@
 body {
     font-family: 'Poppins', Arial, sans-serif;
-           padding-top: 56px; /* Sesuaikan dengan tinggi navbar Anda */
-    }
-    @media (min-width: 992px) {
-        body {
-            padding-top: 76px; /* Sesuaikan jika navbar lebih tinggi pada layar besar */
-        }
+    padding-top: 56px; /* Adjust to your navbar height */
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 76px; /* Adjust if the navbar is taller on larger screens */
     }
 }
+
 .header {
     text-align: center;
     margin-bottom: 30px;
 }
+
 .navbar {
-    
     display: flex;
     justify-content: center;
     background-color: #f8f9fa;
     padding: 10px;
     width: auto;
 }
+
 .navbar a {
     margin: 0 15px;
     text-decoration: none;
     color: #333;
     font-weight: bold;
 }
+
 .navbar a:hover {
-    color:white; /* Change text color for active links */
-    background-color: #A77D54 ;
+    color: white; /* Change text color for active links */
+    background-color: #A77D54;
     border-radius: 4px;
 }
 
@@ -41,27 +44,36 @@ body {
     height: 50px;
     border-radius: 50%;
 }
+
 .products {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
+
 .product {
     text-align: center;
     width: 200px;
 }
+
 .product img {
     width: 100%;
     height: auto;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+.product img:hover {
+    transform: scale(1.1);
+}
+
 .footer {
     background-color: #f8f9fa;
     padding: 20px;
     text-align: center;
     display: flex;
-    flex-direction: column; /* Untuk tampilan mobile */
+    flex-direction: column;
     align-items: center;
 }
 
@@ -70,30 +82,44 @@ body {
     text-decoration: none;
     color: #007bff;
 }
+
 .carousel-inner img {
-    max-height: 480px; /* Adjust to desired height */
+    max-height: 480px;
     object-fit: cover;
 }
-.btn-custom{
+
+.btn-custom {
     background-color: #C9B09A;
     color: #f8f9fa;
     border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.btn-custom:hover{
+.btn-custom:hover {
     background-color: #885A3A;
     color: white;
+    transform: translateY(-2px);
 }
 
+.btn-custom:active {
+    transform: translateY(0);
+}
 
 .modal-custom {
-    max-width: 400px; /* Contoh ukuran khusus */
+    max-width: 400px;
 }
+
 .modal-body {
-    padding: 10px; /* Mengurangi padding untuk tampilan lebih ringkas */
+    padding: 10px;
 }
+
 .modal-content {
-    margin: auto
+    margin: auto;
 }
 
 /* Styling for user photo */
@@ -120,6 +146,10 @@ body {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
+.rating i {
+    color: #ffcc00;
+}
+
 .review-card {
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
@@ -128,66 +158,23 @@ body {
 .review-card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.rating i {
-    color: #ffcc00;
-}
-
-
-/* komentar baking class */
-.review-card {
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-}
-
-.review-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.rating-box {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.rating-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.rating i {
-    color: #ffcc00;
-}
-
-.user-photo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 2px solid #ffcc00;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .add-comment {
     margin-top: 50px;
 }
-/* Side bar */
+
+/* Sidebar */
 main {
     padding-top: 70px;
 }
+
 .sidebar-sticky {
     position: sticky;
-    top: 70px; /* Sesuaikan dengan tinggi navbar + padding tambahan */
+    top: 70px; /* Adjust to your navbar height */
     height: calc(100vh - 70px);
-    padding-top: 1rem; /* Tambahkan sedikit padding di atas */
-   
-
+    padding-top: 1rem;
 }
-
 
 .sidebar-sticky a {
     margin: 10px 0;
@@ -198,41 +185,15 @@ main {
 }
 
 .sidebar-sticky a:hover {
-    
-    color: white; /* Change text color for active links */
+    color: white;
     background-color: #A77D54;
     border-radius: 4px;
 }
 
 .sidebar-sticky a.active {
-    color: #A77D54; /* Change text color for active links */
+    color: #A77D54;
 }
 
-
-/*menu */
-.product img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Add transition for smooth effect */
-}
-
-.product img:hover {
-    transform: scale(1.1); /* Enlarge the image slightly */
-}
-
-.slide-up {
-    opacity: 0;
-    transform: translateY(100px);
-    animation: slide-up 0.5s forwards;
-}
-
-@keyframes slide-up {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 /* Menu */
 .menu-item {
     border-bottom: 1px solid #A77D54;
@@ -240,12 +201,7 @@ main {
     margin-bottom: 10px;
 }
 
-/* Custom Form Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    
-}
-
+/* Form Styles */
 .form-title {
     font-size: 2em;
     color: #333;
@@ -258,14 +214,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-   
     max-width: 100%;
-      
-      
-    .text-center img {
-        max-width: 100%;
-        height: auto;
-      }
 }
 
 .form-group label {
@@ -285,32 +234,6 @@ body {
     box-shadow: 0 0 5px rgba(255, 124, 92, 0.3);
 }
 
-.btn-custom {
-    background-color: #C9B09A;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-custom:hover {
-    background-color: #e66a50;
-    transform: translateY(-2px);
-}
-
-.btn-custom:active {
-    transform: translateY(0);
-}
-
-.form-check-label {
-    margin-right: 20px;
-    font-weight: 500;
-}
-
 textarea.input-field {
     resize: none;
 }
@@ -321,72 +244,66 @@ input::placeholder {
     opacity: 1;
 }
 
-.top{
+.top {
     color: #512B1A;
 }
 
-.add-comment{
+.add-comment {
     color: #512B1A;
 }
 
-.form {
-    background-color: #512B1A;
-    justify-content: center;
-}
-
-/*iklan*/
-
-  .advertisements img {
+/* Advertisements */
+.advertisements img {
     max-width: 100%;
     height: auto;
-  }
-  
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
     .col-md-10 {
-      flex: 0 0 auto;
-      width: 83.33333333%;
+        flex: 0 0 auto;
+        width: 83.33333333%;
     }
-  
-    .ad-container {
-        position: relative;
-        width: 100%;
-    }
-    
-    .ad-container img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    
-    .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-    
-    .ad-container:hover .overlay {
-        opacity: 1;
-    }
-    
-    .text {
-        color: white;
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
+}
 
-    /*outlet*/
+.ad-container {
+    position: relative;
+    width: 100%;
+}
 
-    .content-wrapper {
-        margin-top: 20px;
-    }
+.ad-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.ad-container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Outlet */
+.content-wrapper {
+    margin-top: 20px;
+}
