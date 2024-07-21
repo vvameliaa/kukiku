@@ -60,7 +60,11 @@ body {
     background-color: #f8f9fa;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column; /* Untuk tampilan mobile */
+    align-items: center;
 }
+
 .follow a {
     margin: 0 10px;
     text-decoration: none;
